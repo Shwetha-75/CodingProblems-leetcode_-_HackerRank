@@ -8,21 +8,21 @@ class Solution:
                   # first row --> row is constant and column is varied
                   for k in range(j,col-j):
                       result.append(matrix[i][k])
-                  print("first row",result)
+                  
                   # last column --> column constant and row is varied 
                   for k in range(i+1,row-i):
                       result.append(matrix[k][col-j-1])
-                  print("last column ",result)
+                 
                   if len(result)==row*col: break   
                   # last row --> row constant and column is varied 
                   for k in range(col-j-2,j-1,-1):
                       result.append(matrix[row-i-1][k])
-                  print("last row",result)
+                  
                       
                   # first col --> column constant and row is varied 
                   for k in range(row-i-2,i,-1):
                       result.append(matrix[k][j])
-                  print("first col",result)
+                  
                       
                   j+=1
                   i+=1
