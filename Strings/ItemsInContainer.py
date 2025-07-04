@@ -58,7 +58,7 @@ class Solution:
                          break 
               if r==-1:
                  for j in range(endIndices[i]-1,startIndices[i],1):
-                     if rightPrefix[j]!=-1:
+                      if rightPrefix[j]!=-1:
                          r=rightPrefix[j] 
                          break 
               if l<r:
