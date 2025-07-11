@@ -45,6 +45,22 @@ class Solution:
             if count==x:
                 return x 
         return -1 
+class Solution:
+      def specialArray(self, nums: list[int]) -> int:
+          left,right=0,len(nums)
+          while left<=right:
+                x=(left+right)//2 
+                count=0 
+                for num in nums:
+                    if num>=x:
+                        count+=1
+                if x==count:
+                    return x 
+                if x<count:
+                    left=x+1
+                else:
+                    right=x-1
+          return -1     
 class TestApp:
       def testing_case_one(self):
           assert Solution().specialArray([3,5])==2 
